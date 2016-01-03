@@ -2,18 +2,20 @@ package davidhxxx.teach.designpattern.cor;
 
 public class RuleApplyDiscountFirstOrder extends AbstractRule {
 
-    public boolean apply(Order order) {
-	if (applyDiscountWhenFirstOrder(order)) {
+    public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
+	if (applyDiscountWhenFirstOrder(inputDataForDiscountRules)) {
 	    return true;
 	}
-	return checkNextRule(order);
+	return checkNextRule(inputDataForDiscountRules);
 
     }
 
-    private boolean applyDiscountWhenFirstOrder(Order order) {
-	//Fake implementation
-	order.applyDiscountInPrct(0.075F);
-	return true;
+    private boolean applyDiscountWhenFirstOrder(InputForDiscountRules inputDataForDiscountRules) {
+	if (inputDataForDiscountRules.isFirstOrder()) {
+	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(0.075F);
+	    return true;
+	}
+	return false;
     }
 
 }

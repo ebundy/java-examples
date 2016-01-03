@@ -2,18 +2,19 @@ package davidhxxx.teach.designpattern.cor;
 
 public class RuleApplyDiscountHappyHour extends AbstractRule {
 
-    public boolean apply(Order order) {
-	if (applyDiscountWhenHappyHour(order)) {
+    public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
+	if (applyDiscountWhenHappyHour(inputDataForDiscountRules)) {
 	    return true;
 	}
-	return checkNextRule(order);
-
+	return checkNextRule(inputDataForDiscountRules);
     }
 
-    private boolean applyDiscountWhenHappyHour(Order order) {
-	// Fake implementation
-	order.applyDiscountInPrct(0.05F);
-	return true;
+    private boolean applyDiscountWhenHappyHour(InputForDiscountRules inputDataForDiscountRules) {
+	if (inputDataForDiscountRules.isHappyHour()) {
+	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(0.05F);
+	    return true;
+	}
+	return false;
     }
 
 }

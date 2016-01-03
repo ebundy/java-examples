@@ -8,9 +8,9 @@ public abstract class AbstractRule implements IRule {
 	this.nextRule = nextRule;
     }
 
-    public boolean checkNextRule(Order order) {
+    public boolean checkNextRule(InputForDiscountRules inputDataForDiscountRules) {
 	if (this.nextRule != null) {
-	    return this.nextRule.apply(order);
+	    return this.nextRule.apply(inputDataForDiscountRules);
 	}
 
 	return true;
