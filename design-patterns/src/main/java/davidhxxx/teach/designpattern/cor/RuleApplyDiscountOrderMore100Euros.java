@@ -1,12 +1,16 @@
 package davidhxxx.teach.designpattern.cor;
 
+import davidhxxx.teach.designpattern.cor.common.AbstractRule;
+import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
+import davidhxxx.teach.designpattern.cor.common.Order;
+
 public class RuleApplyDiscountOrderMore100Euros extends AbstractRule {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (applyDiscountWhenOrderMore100Euros(inputDataForDiscountRules)) {
 	    return true;
 	}
-	return checkNextRule(inputDataForDiscountRules);
+	return applyNextRuleIfExist(inputDataForDiscountRules);
 
     }
 

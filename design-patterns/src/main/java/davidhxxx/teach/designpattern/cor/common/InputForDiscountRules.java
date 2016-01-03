@@ -1,4 +1,4 @@
-package davidhxxx.teach.designpattern.cor;
+package davidhxxx.teach.designpattern.cor.common;
 
 public class InputForDiscountRules {
 

@@ -2,14 +2,14 @@ package davidhxxx.teach.designpattern.cor.client;
 
 import org.junit.Test;
 
-import davidhxxx.teach.designpattern.cor.IRule;
-import davidhxxx.teach.designpattern.cor.InputForDiscountRules;
-import davidhxxx.teach.designpattern.cor.Order;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountFirstOrder;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountFirstOrderAndMore200Euros;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountHappyHour;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountOrderMore100Euros;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountOrderMore200Euros;
+import davidhxxx.teach.designpattern.cor.common.IRule;
+import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
+import davidhxxx.teach.designpattern.cor.common.Order;
 import junit.framework.Assert;
 
 public class ClientRulesTest {
