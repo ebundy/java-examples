@@ -13,7 +13,7 @@ import davidhxxx.teach.designpattern.cor.improved.common.Order;
 import davidhxxx.teach.designpattern.cor.improved.common.RuleChainFactory;
 import junit.framework.Assert;
 
-public class CorImproveTest {
+public class ImprovedCorTest {
 
     @Test
     public void assertFirstAcceptedRuleAreAppliedInOrder() throws Exception {
@@ -55,20 +55,8 @@ public class CorImproveTest {
     }
 
     private IRule createChainOfRules() {
-	IRule ruleFirstOrder = new RuleApplyDiscountFirstOrder();
-	IRule ruleHappyHour = new RuleApplyDiscountHappyHour();
-	IRule ruleOrderMore100Euros = new RuleApplyDiscountOrderMore100Euros();
-	IRule ruleOrderMore200Euros = new RuleApplyDiscountOrderMore200Euros();
 
-	// first node of the chain
-	IRule firstRule = new RuleApplyDiscountFirstOrderAndMore200Euros();
-
-	firstRule.setNextRule(ruleOrderMore200Euros);
-	ruleOrderMore200Euros.setNextRule(ruleOrderMore100Euros);
-	ruleOrderMore100Euros.setNextRule(ruleFirstOrder);
-	ruleFirstOrder.setNextRule(ruleHappyHour);
-
-	RuleChainFactory.getInstance().createDiscountChainOrderedDescByInterestClient(new RuleApplyDiscountFirstOrder(),
+	IRule firstRule = RuleChainFactory.getInstance().createDiscountChainOrderedByDecreasingDiscountApplied(new RuleApplyDiscountFirstOrder(),
 		new RuleApplyDiscountHappyHour(),
 		new RuleApplyDiscountOrderMore100Euros(),
 		new RuleApplyDiscountOrderMore200Euros(),

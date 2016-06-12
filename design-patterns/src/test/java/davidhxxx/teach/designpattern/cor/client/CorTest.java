@@ -12,7 +12,7 @@ import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 import davidhxxx.teach.designpattern.cor.common.Order;
 import junit.framework.Assert;
 
-public class ClientRulesTest {
+public class CorTest {
 
     @Test
     public void assertFirstAcceptedRuleAreAppliedInOrder() throws Exception {
