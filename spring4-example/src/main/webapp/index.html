@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html ng-app="gemStore">
+
 <head>
-<!--     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" /> -->
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
 <script type="text/javascript" src="angular.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </head>
+
 <body class="container" ng-controller="StoreController as store">
 	<div class="product row" ng-repeat="product in store.products">
 		<h3>
 			{{product.name}} <em class="pull-right">${{product.price}}</em>
 		</h3>
 		<!-- Image Gallery  -->
-		<div class="gallery">
-			<img ng-src="{{product.images[0]}}" />
+		<div>
+			<img class="gallery" ng-src="{{product.images[0]}}" />
 		</div>
 
 		<ul class="img-thumbnails clearfix">
@@ -20,6 +22,20 @@
 				ng-repeat="image in product.images"><img ng-src="{{image}}" />
 			</li>
 		</ul>
+
+
+		<section ng-controller="PanelController as panel">
+		
+			<div ng-show="selection==1">Description</div>
+			<div ng-show="selection==2">Reserver</div>
+			<div ng-show="selection==3">Avis</div>
+		<ul>
+			<li><a href ng-click="panel.selectTab(1)"  ng-class="{active:panel.isSelected(1)}"/>Description</li>
+			<li><a href ng-click="panel.selectTab(2)" ng-class="{active:panel.isSelected(2)}"/>Reserver</li>
+			<li><a href ng-click="panel.selectTab(3)" ng-class="{active:panel.isSelected(3)}"/>Avis</li>
+		</ul>
+			<div>selection = {{panel.selection}}</div>
+		</section>
 	</div>
 </body>
 </html>

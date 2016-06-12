@@ -15,7 +15,7 @@ import junit.framework.Assert;
 public class ClientRulesTest {
 
     @Test
-    public void assertFirstAcceptedRuleIsAppliedInOrder() throws Exception {
+    public void assertFirstAcceptedRuleAreAppliedInOrder() throws Exception {
 
 	// fixture
 	IRule firstRule = createChainOfRules();

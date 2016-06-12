@@ -1,14 +1,14 @@
-package davidhxxx.teach.designpattern.corplus.common;
+package davidhxxx.teach.designpattern.mediator.common;
 
 import java.util.List;
 
-public class RuleOrchestrator {
+public class RuleMediator {
 
     private int currentIndexOfList;
     private List<? extends IRule> rulesOrdered;
 
 
-    public RuleOrchestrator(List<? extends IRule> rulesOrdered) {
+    public RuleMediator(List<? extends IRule> rulesOrdered) {
 	this.rulesOrdered = rulesOrdered;
 	currentIndexOfList=0;
     }

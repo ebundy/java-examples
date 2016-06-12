@@ -1,7 +1,7 @@
-package davidhxxx.teach.designpattern.corplus;
+package davidhxxx.teach.designpattern.mediator;
 
-import davidhxxx.teach.designpattern.corplus.common.IDiscountRule;
-import davidhxxx.teach.designpattern.corplus.common.InputForDiscountRules;
+import davidhxxx.teach.designpattern.mediator.common.IDiscountRule;
+import davidhxxx.teach.designpattern.mediator.common.InputForDiscountRules;
 
 public class RuleApplyDiscountFirstOrder   implements IDiscountRule {
 

@@ -4,7 +4,7 @@ import davidhxxx.teach.designpattern.cor.common.AbstractRule;
 import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 import davidhxxx.teach.designpattern.cor.common.Order;
 
-public class RuleApplyDiscountOrderMore200Euros extends AbstractRule {
+public class RuleApplyDiscountOrderMore200Euros extends AbstractRule  {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (applyDiscountWhenOrderMore200Euros(inputDataForDiscountRules)) {

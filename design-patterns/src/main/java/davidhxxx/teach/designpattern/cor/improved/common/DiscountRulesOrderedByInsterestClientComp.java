@@ -1,4 +1,4 @@
-package davidhxxx.teach.designpattern.corplus.common;
+package davidhxxx.teach.designpattern.cor.improved.common;
 
 import java.util.Comparator;
 

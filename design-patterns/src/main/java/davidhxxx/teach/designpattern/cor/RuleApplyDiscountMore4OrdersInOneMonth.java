@@ -3,7 +3,7 @@ package davidhxxx.teach.designpattern.cor;
 import davidhxxx.teach.designpattern.cor.common.AbstractRule;
 import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 
-public class RuleApplyDiscountMore4OrdersInOneMonth extends AbstractRule {
+public class RuleApplyDiscountMore4OrdersInOneMonth extends AbstractRule  {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (applyDiscountWhenMore4OrdersInOneMonth(inputDataForDiscountRules)) {

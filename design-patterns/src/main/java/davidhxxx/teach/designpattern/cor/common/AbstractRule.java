@@ -13,7 +13,7 @@ public abstract class AbstractRule implements IRule {
 	    return this.nextRule.apply(inputDataForDiscountRules);
 	}
 
-	return true;
+	return false;
     }
 
 }
