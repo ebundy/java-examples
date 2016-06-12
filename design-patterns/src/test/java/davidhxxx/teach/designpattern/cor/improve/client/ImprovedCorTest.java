@@ -56,7 +56,8 @@ public class ImprovedCorTest {
 
     private IRule createChainOfRules() {
 
-	IRule firstRule = RuleChainFactory.getInstance().createDiscountChainOrderedByDecreasingDiscountApplied(new RuleApplyDiscountFirstOrder(),
+	IRule firstRule = RuleChainFactory.getInstance().createDiscountChainOrderedByDecreasingDiscountApplied(
+		new RuleApplyDiscountFirstOrder(),
 		new RuleApplyDiscountHappyHour(),
 		new RuleApplyDiscountOrderMore100Euros(),
 		new RuleApplyDiscountOrderMore200Euros(),
