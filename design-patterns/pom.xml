@@ -6,6 +6,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
+		<!-- compile dependencies -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>0.7.5</version>
+		</dependency>
+		<!-- test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
