@@ -11,7 +11,7 @@ public class RuleApplyDiscountOrderMore200Euros extends AbstractRule implements 
 	Order order = inputDataForDiscountRules.getOrder();
 
 	if (order.getPriceTotal() > 200) {
-	    order.applyDiscountInPrct(0.25F);
+	    order.applyDiscountInPrct(getPrctDiscount());
 	    return true;
 	}
 	return false;

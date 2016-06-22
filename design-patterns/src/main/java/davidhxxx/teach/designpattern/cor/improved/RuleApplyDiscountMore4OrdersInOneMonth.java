@@ -10,7 +10,7 @@ public class RuleApplyDiscountMore4OrdersInOneMonth extends AbstractRule impleme
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 
 	if (inputDataForDiscountRules.getOrderCountInOneMonth() > 4) {
-	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(0.15F);
+	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(getPrctDiscount());
 	    return true;
 	}
 	return false;

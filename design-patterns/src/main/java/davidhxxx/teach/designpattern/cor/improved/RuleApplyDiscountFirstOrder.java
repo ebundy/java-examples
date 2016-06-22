@@ -8,7 +8,7 @@ public class RuleApplyDiscountFirstOrder extends AbstractRule implements IDiscou
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (inputDataForDiscountRules.isFirstOrder()) {
-	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(0.075F);
+	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(getPrctDiscount());
 	    return true;
 	}
 	return false;

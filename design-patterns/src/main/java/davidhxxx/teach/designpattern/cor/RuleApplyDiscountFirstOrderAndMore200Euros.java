@@ -18,7 +18,7 @@ public class RuleApplyDiscountFirstOrderAndMore200Euros extends AbstractRule {
 	Order order = inputDataForDiscountRules.getOrder();
 	
 	if (inputDataForDiscountRules.isFirstOrder() && order.getPriceTotal() > 200) {
-	    order.applyDiscountInPrct(0.25F);
+	    order.applyDiscountInPrct(0.30F);
 	    return true;
 	}
 	return false;

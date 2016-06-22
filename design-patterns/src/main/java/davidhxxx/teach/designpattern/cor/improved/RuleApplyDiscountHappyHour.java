@@ -8,7 +8,7 @@ public class RuleApplyDiscountHappyHour extends AbstractRule implements IDiscoun
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (inputDataForDiscountRules.isHappyHour()) {
-	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(0.05F);
+	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(getPrctDiscount());
 	    return true;
 	}
 	return false;

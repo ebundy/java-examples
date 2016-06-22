@@ -21,9 +21,17 @@ public class ImprovedCorTest {
 	// fixture
 	IRule firstRule = createChainOfRules();
 
-	// CASE : more 200 euros applied
+	// CASE : more 200 euros applied and first order
 	Order order = new Order(400F);
-	InputForDiscountRules inputForDiscountRules = new InputForDiscountRules(order, false, 6, true);
+	InputForDiscountRules inputForDiscountRules = new InputForDiscountRules(order, true, 6, true);
+	// action
+	firstRule.applyChain(inputForDiscountRules);
+	// assertion
+	Assert.assertEquals(280F, order.getPriceTotal());
+
+	// CASE : more 200 euros applied
+	order = new Order(400F);
+	inputForDiscountRules = new InputForDiscountRules(order, false, 6, true);
 	// action
 	firstRule.applyChain(inputForDiscountRules);
 	// assertion
