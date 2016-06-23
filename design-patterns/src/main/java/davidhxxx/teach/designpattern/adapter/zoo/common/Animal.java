@@ -2,7 +2,7 @@ package davidhxxx.teach.designpattern.adapter.zoo.common;
 
 public abstract class Animal {
 
-    public abstract boolean isHerbivor();
+    public abstract boolean isHerbivore();
 
     private int hungryLevel;
 

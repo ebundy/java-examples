@@ -21,10 +21,10 @@ public class ZooWithComposition {
 	return false;
     }
 
-    public boolean feedHerbivors() {
+    public boolean feedHerbivores() {
 	boolean isAtLeastOneAnimalFed = false;
 	for (Animal currentAnimal : innerList) {
-	    if (currentAnimal.isHerbivor()) {
+	    if (currentAnimal.isHerbivore()) {
 		currentAnimal.feed();
 		isAtLeastOneAnimalFed = true;
 	    }

@@ -10,7 +10,7 @@ import junit.framework.Assert;
 
 public class ModelMapperWithInheritanceTest {
 
-    ModelMapperWithInheritance modelMapper;
+    private ModelMapperWithInheritance modelMapper;
 
     @Before
     public void before() {

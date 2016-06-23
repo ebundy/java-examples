@@ -48,7 +48,7 @@ public class ZooWithInheritance extends ArrayList<Animal> {
     public boolean feedHerbivores() {
 	boolean isAtLeastOneAnimalFed = false;
 	for (Animal currentAnimal : this) {
-	    if (currentAnimal.isHerbivor()) {
+	    if (currentAnimal.isHerbivore()) {
 		currentAnimal.feed();
 		isAtLeastOneAnimalFed = true;
 	    }

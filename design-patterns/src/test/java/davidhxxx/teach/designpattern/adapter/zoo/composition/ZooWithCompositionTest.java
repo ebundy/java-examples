@@ -20,7 +20,7 @@ public class ZooWithCompositionTest {
     }
 
     @Test
-    public void addAnimal_adds_an_animal_retrievable_with_find_animals_but_are_unmodifiable() throws Exception {
+    public void addAnimal_adds_an_animal_retrievable_with_find_animals_but_is_not_modifiable() throws Exception {
 	final Zebra animalAdded = new Zebra();
 
 	// action
