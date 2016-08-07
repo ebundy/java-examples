@@ -1,9 +1,9 @@
 package davidhxxx.teach.designpattern.cor;
 
-import davidhxxx.teach.designpattern.cor.common.AbstractRule;
+import davidhxxx.teach.designpattern.cor.common.AbstractDiscountRule;
 import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 
-public class RuleApplyDiscountHappyHour extends AbstractRule  {
+public class RuleApplyDiscountHappyHour extends AbstractDiscountRule  {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (applyDiscountWhenHappyHour(inputDataForDiscountRules)) {

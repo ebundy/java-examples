@@ -1,10 +1,9 @@
 package davidhxxx.teach.designpattern.cor.improved;
 
-import davidhxxx.teach.designpattern.cor.improved.common.AbstractRule;
-import davidhxxx.teach.designpattern.cor.improved.common.IDiscountRule;
+import davidhxxx.teach.designpattern.cor.improved.common.AbstractDiscountRule;
 import davidhxxx.teach.designpattern.cor.improved.common.InputForDiscountRules;
 
-public class RuleApplyDiscountFirstOrder extends AbstractRule implements IDiscountRule {
+public class RuleApplyDiscountFirstOrder extends AbstractDiscountRule  {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (inputDataForDiscountRules.isFirstOrder()) {

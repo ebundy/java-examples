@@ -17,7 +17,7 @@ public class RuleChainFactory {
 	return Holder.instance;
     }
 
-    public IRule createDiscountChainOrderedByDecreasingDiscountApplied(IDiscountRule... rules) {
+    public IDiscountRule createDiscountChainOrderedByDecreasingDiscountApplied(IDiscountRule... rules) {
 
 	if (rules.length < 2) {
 	    throw new IllegalArgumentException("a chain must contain at least two rules");

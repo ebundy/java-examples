@@ -7,7 +7,7 @@ import davidhxxx.teach.designpattern.cor.improved.RuleApplyDiscountFirstOrderAnd
 import davidhxxx.teach.designpattern.cor.improved.RuleApplyDiscountHappyHour;
 import davidhxxx.teach.designpattern.cor.improved.RuleApplyDiscountOrderMore100Euros;
 import davidhxxx.teach.designpattern.cor.improved.RuleApplyDiscountOrderMore200Euros;
-import davidhxxx.teach.designpattern.cor.improved.common.IRule;
+import davidhxxx.teach.designpattern.cor.improved.common.IDiscountRule;
 import davidhxxx.teach.designpattern.cor.improved.common.InputForDiscountRules;
 import davidhxxx.teach.designpattern.cor.improved.common.Order;
 import davidhxxx.teach.designpattern.cor.improved.common.RuleChainFactory;
@@ -19,7 +19,7 @@ public class ImprovedCorTest {
     public void assertFirstAcceptedRuleAreAppliedInOrder() throws Exception {
 
 	// fixture
-	IRule firstRule = createChainOfRules();
+	IDiscountRule firstRule = createChainOfRules();
 
 	// CASE : more 200 euros applied and first order
 	Order order = new Order(400F);
@@ -62,9 +62,9 @@ public class ImprovedCorTest {
 	Assert.assertEquals(100F, order.getPriceTotal());
     }
 
-    private IRule createChainOfRules() {
+    private IDiscountRule createChainOfRules() {
 
-	IRule firstRule = RuleChainFactory.getInstance().createDiscountChainOrderedByDecreasingDiscountApplied(
+	IDiscountRule firstRule = RuleChainFactory.getInstance().createDiscountChainOrderedByDecreasingDiscountApplied(
 		new RuleApplyDiscountFirstOrder(),
 		new RuleApplyDiscountHappyHour(),
 		new RuleApplyDiscountOrderMore100Euros(),

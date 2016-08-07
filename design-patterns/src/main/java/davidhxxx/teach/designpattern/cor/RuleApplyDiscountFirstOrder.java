@@ -1,9 +1,9 @@
 package davidhxxx.teach.designpattern.cor;
 
-import davidhxxx.teach.designpattern.cor.common.AbstractRule;
+import davidhxxx.teach.designpattern.cor.common.AbstractDiscountRule;
 import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 
-public class RuleApplyDiscountFirstOrder extends AbstractRule {
+public class RuleApplyDiscountFirstOrder extends AbstractDiscountRule {
 
     public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 	if (applyDiscountWhenFirstOrder(inputDataForDiscountRules)) {

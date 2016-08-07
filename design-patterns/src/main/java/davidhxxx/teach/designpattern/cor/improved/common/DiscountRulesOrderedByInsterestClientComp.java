@@ -2,9 +2,9 @@ package davidhxxx.teach.designpattern.cor.improved.common;
 
 import java.util.Comparator;
 
-public class DiscountRulesOrderedByInsterestClientComp implements Comparator<IDiscountRule> {
+public class DiscountRulesOrderedByInsterestClientComp implements Comparator<IDiscountPrct> {
 
-    public int compare(IDiscountRule o1, IDiscountRule o2) {
+    public int compare(IDiscountPrct o1, IDiscountPrct o2) {
 
 	if (o1.getPrctDiscount() > o2.getPrctDiscount()) {
 	    return -1;

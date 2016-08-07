@@ -1,10 +1,10 @@
 package davidhxxx.teach.designpattern.cor.improved.common;
 
-public abstract class AbstractRule implements IRule {
+public abstract class AbstractDiscountRule implements IDiscountRule {
 
-    protected IRule nextRule;
+    protected IDiscountRule nextRule;
 
-    public void setNextRule(IRule nextRule) {
+    public void setNextRule(IDiscountRule nextRule) {
 	this.nextRule = nextRule;
     }
 

@@ -1,8 +1,8 @@
 package davidhxxx.teach.designpattern.cor.common;
 
-public interface IRule {
+public interface IDiscountRule {
     
-    public void setNextRule(IRule nextRule);
+    public void setNextRule(IDiscountRule nextRule);
     public abstract boolean apply(InputForDiscountRules inputDataForDiscountRules);
 
 }

@@ -7,7 +7,7 @@ import davidhxxx.teach.designpattern.cor.RuleApplyDiscountFirstOrderAndMore200Eu
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountHappyHour;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountOrderMore100Euros;
 import davidhxxx.teach.designpattern.cor.RuleApplyDiscountOrderMore200Euros;
-import davidhxxx.teach.designpattern.cor.common.IRule;
+import davidhxxx.teach.designpattern.cor.common.IDiscountRule;
 import davidhxxx.teach.designpattern.cor.common.InputForDiscountRules;
 import davidhxxx.teach.designpattern.cor.common.Order;
 import junit.framework.Assert;
@@ -18,7 +18,7 @@ public class CorTest {
     public void assertFirstAcceptedRuleAreAppliedInOrder() throws Exception {
 
 	// fixture
-	IRule firstRule = createChainOfRules();
+	IDiscountRule firstRule = createChainOfRules();
 
 	// CASE : more 200 euros applied and first order
 	Order order = new Order(400F);
@@ -61,14 +61,14 @@ public class CorTest {
 	Assert.assertEquals(100F, order.getPriceTotal());
     }
 
-    private IRule createChainOfRules() {
-	IRule ruleFirstOrder = new RuleApplyDiscountFirstOrder();
-	IRule ruleHappyHour = new RuleApplyDiscountHappyHour();
-	IRule ruleOrderMore100Euros = new RuleApplyDiscountOrderMore100Euros();
-	IRule ruleOrderMore200Euros = new RuleApplyDiscountOrderMore200Euros();
+    private IDiscountRule createChainOfRules() {
+	IDiscountRule ruleFirstOrder = new RuleApplyDiscountFirstOrder();
+	IDiscountRule ruleHappyHour = new RuleApplyDiscountHappyHour();
+	IDiscountRule ruleOrderMore100Euros = new RuleApplyDiscountOrderMore100Euros();
+	IDiscountRule ruleOrderMore200Euros = new RuleApplyDiscountOrderMore200Euros();
 
 	// first node of the chain
-	IRule firstRule = new RuleApplyDiscountFirstOrderAndMore200Euros();
+	IDiscountRule firstRule = new RuleApplyDiscountFirstOrderAndMore200Euros();
 
 	firstRule.setNextRule(ruleOrderMore200Euros);
 	ruleOrderMore200Euros.setNextRule(ruleOrderMore100Euros);
