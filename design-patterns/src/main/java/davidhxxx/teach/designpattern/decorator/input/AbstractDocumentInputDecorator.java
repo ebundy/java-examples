@@ -6,6 +6,7 @@ public abstract class AbstractDocumentInputDecorator implements IDocumentInput {
 
     protected IDocumentInput document;
     protected byte[] bytes;
+    private String content;
 
     public AbstractDocumentInputDecorator(IDocumentInput document) {
 	this.document = document;
@@ -16,6 +17,9 @@ public abstract class AbstractDocumentInputDecorator implements IDocumentInput {
     }
 
     public final String getStringContent() {
-	return new String(getBytes(),StandardCharsets.UTF_8);
+	if (content == null) {
+	    content = new String(getBytes(), StandardCharsets.UTF_8);
+	}
+	return content;
     }
 }

@@ -8,9 +8,9 @@ public abstract class AbstractDiscountRule implements IDiscountRule {
 	this.nextRule = nextRule;
     }
 
-    public boolean applyNextRuleIfExist(InputForDiscountRules inputDataForDiscountRules) {
+    public boolean applyNextRuleIfExist(InputForDiscountRules inputForDiscountRules) {
 	if (this.nextRule != null) {
-	    return this.nextRule.apply(inputDataForDiscountRules);
+	    return this.nextRule.apply(inputForDiscountRules);
 	}
 	return false;
     }

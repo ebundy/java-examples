@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 
 public class DocumentInput implements IDocumentInput {
 
+    private String content;
     private byte[] bytes;
 
     public DocumentInput(byte[] bytes) {
@@ -17,8 +18,11 @@ public class DocumentInput implements IDocumentInput {
     public void read() {
     }
 
-    public String getStringContent() {
-	return new String(getBytes(),StandardCharsets.UTF_8);
+    public final String getStringContent() {
+	if (content == null) {
+	    content = new String(getBytes(), StandardCharsets.UTF_8);
+	}
+	return content;
     }
 
 }
