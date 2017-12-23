@@ -2,10 +2,10 @@ package davidhxxx.teach.designpattern.decorator.input;
 
 public interface IDocumentInput {
 
-    void read();
+	void read();
 
-    byte[] getBytes();
+	byte[] getBytes();
 
-    String getStringContent();
+	String getStringContent();
 
 }

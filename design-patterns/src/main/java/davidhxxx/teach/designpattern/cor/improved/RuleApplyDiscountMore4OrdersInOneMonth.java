@@ -7,17 +7,18 @@ import davidhxxx.teach.designpattern.cor.improved.common.Order;
 
 public class RuleApplyDiscountMore4OrdersInOneMonth extends AbstractDiscountRule implements IDiscountRule {
 
-    public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
+	public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
 
-	if (inputDataForDiscountRules.getOrderCountInOneMonth() > 4) {
-	    inputDataForDiscountRules.getOrder().applyDiscountInPrct(getPrctDiscount());
-	    return true;
+		if (inputDataForDiscountRules.getOrderCountInOneMonth() > 4) {
+			inputDataForDiscountRules.getOrder()
+			                         .applyDiscountInPrct(getPrctDiscount());
+			return true;
+		}
+		return false;
+
 	}
-	return false;
 
-    }
-
-    public float getPrctDiscount() {
-	return 0.15F;
-    }
+	public float getPrctDiscount() {
+		return 0.15F;
+	}
 }

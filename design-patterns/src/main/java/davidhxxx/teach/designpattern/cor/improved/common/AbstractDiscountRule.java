@@ -2,25 +2,25 @@ package davidhxxx.teach.designpattern.cor.improved.common;
 
 public abstract class AbstractDiscountRule implements IDiscountRule {
 
-    protected IDiscountRule nextRule;
+	protected IDiscountRule nextRule;
 
-    public void setNextRule(IDiscountRule nextRule) {
-	this.nextRule = nextRule;
-    }
-
-    public final boolean applyChain(InputForDiscountRules inputDataForDiscountRules) {
-	if (apply(inputDataForDiscountRules)) {
-	    return true;
+	public void setNextRule(IDiscountRule nextRule) {
+		this.nextRule = nextRule;
 	}
 
-	return applyNextRuleIfExist(inputDataForDiscountRules);
-    }
+	public final boolean applyChain(InputForDiscountRules inputDataForDiscountRules) {
+		if (apply(inputDataForDiscountRules)) {
+			return true;
+		}
 
-    private boolean applyNextRuleIfExist(InputForDiscountRules inputDataForDiscountRules) {
-	if (this.nextRule != null) {
-	    return this.nextRule.applyChain(inputDataForDiscountRules);
+		return applyNextRuleIfExist(inputDataForDiscountRules);
 	}
-	return false;
-    }
+
+	private boolean applyNextRuleIfExist(InputForDiscountRules inputDataForDiscountRules) {
+		if (this.nextRule != null) {
+			return this.nextRule.applyChain(inputDataForDiscountRules);
+		}
+		return false;
+	}
 
 }

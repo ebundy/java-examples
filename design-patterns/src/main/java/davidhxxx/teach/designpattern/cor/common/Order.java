@@ -2,18 +2,18 @@ package davidhxxx.teach.designpattern.cor.common;
 
 public class Order {
 
-    private float priceTotal;
+	private float priceTotal;
 
-    public Order(float priceTotal) {
-	this.priceTotal = priceTotal;
-    }
+	public Order(float priceTotal) {
+		this.priceTotal = priceTotal;
+	}
 
-    public float getPriceTotal() {
-	return priceTotal;
-    }
+	public float getPriceTotal() {
+		return priceTotal;
+	}
 
-    public void applyDiscountInPrct(float discountInPrct) {
-	this.priceTotal = priceTotal * (1F - discountInPrct);
-    }
+	public void applyDiscountInPrct(float discountInPrct) {
+		this.priceTotal = priceTotal * (1F - discountInPrct);
+	}
 
 }

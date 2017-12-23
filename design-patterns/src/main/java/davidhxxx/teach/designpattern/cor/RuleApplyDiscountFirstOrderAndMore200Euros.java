@@ -6,22 +6,22 @@ import davidhxxx.teach.designpattern.cor.common.Order;
 
 public class RuleApplyDiscountFirstOrderAndMore200Euros extends AbstractDiscountRule {
 
-    public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
-	if (applyDiscountWhenOrderMore200Euros(inputDataForDiscountRules)) {
-	    return true;
+	public boolean apply(InputForDiscountRules inputDataForDiscountRules) {
+		if (applyDiscountWhenOrderMore200Euros(inputDataForDiscountRules)) {
+			return true;
+		}
+		return applyNextRuleIfExist(inputDataForDiscountRules);
+
 	}
-	return applyNextRuleIfExist(inputDataForDiscountRules);
 
-    }
+	private boolean applyDiscountWhenOrderMore200Euros(InputForDiscountRules inputDataForDiscountRules) {
+		Order order = inputDataForDiscountRules.getOrder();
 
-    private boolean applyDiscountWhenOrderMore200Euros(InputForDiscountRules inputDataForDiscountRules) {
-	Order order = inputDataForDiscountRules.getOrder();
-
-	if (inputDataForDiscountRules.isFirstOrder() && order.getPriceTotal() > 200) {
-	    order.applyDiscountInPrct(0.30F);
-	    return true;
+		if (inputDataForDiscountRules.isFirstOrder() && order.getPriceTotal() > 200) {
+			order.applyDiscountInPrct(0.30F);
+			return true;
+		}
+		return false;
 	}
-	return false;
-    }
 
 }
